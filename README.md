@@ -1,7 +1,7 @@
 # Filter OPTIONS Method
 [![Version](https://img.shields.io/badge/Version-v1.0-green.svg)]()
 [![Language](https://img.shields.io/badge/Language-Python-orange.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-red.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/capt-meelo/filter-options-method/blob/master/LICENSE)
 
 
 A Burp extension that filters out `OPTIONS` requests from populating Burp's Proxy history. This extension works by doing the following:
@@ -9,11 +9,11 @@ A Burp extension that filters out `OPTIONS` requests from populating Burp's Prox
 1. Forcing the `Content-Typ` header value to `text/css; charset=UTF-8`.
 2. Emptying the response body so Burp will not recognize the MIME type incorrectly.
 
-A post about this extension can be found [post]().
+A post about this extension can be found [post](https://captmeelo.com/pentest/2020/01/06/filter-options-method.html).
 
 ### Installation
 
-1. Download [burp-filter-options-method.py]() to your machine.
+1. Download [burp-filter-options-method.py](https://github.com/capt-meelo/filter-options-method/blob/master/filter-options-method.py) to your machine.
 2. Go to _**Extender > Extensions**_ tab, then click on the _**Add**_ button. On the new window, browse the location of **burp-filter-options-method.py** and click the _**Next**_ button.
 ![Load Extension](/images/load-extension.png)
 
