@@ -1,6 +1,6 @@
 """
 Name:           Filter OPTIONS Method
-Version:        1.0
+Version:        1.1
 Author:         Capt. Meelo (@CaptMeelo)
 Description:    A Burp extension that filters out `OPTIONS` requests from populating Burp's Proxy history. 
 Blog Post:      https://captmeelo.com/pentest/2020/01/06/filter-options-method.html
@@ -56,8 +56,8 @@ class BurpExtender(IBurpExtender, IHttpListener):
             # add the new Content-Type
             responseHeaders.add("Content-Type: text/css; charset=UTF-8")
             
-            # empty the response body (refer to the blog why I did it)
-            responseBodyBytes = ""
+            # comment out the response body (refer to the blog why I did it)
+            responseBodyBytes = "/* Injected by 'Filter OPTIONS Method'\n\n" +responseBytes[responseInfo.getBodyOffset():] + "\n\nInjected by 'Filter OPTIONS Method' */"
             
             # rebuild the new response
             responseModified = self._helpers.buildHttpMessage(responseHeaders, responseBodyBytes)

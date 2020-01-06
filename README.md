@@ -1,13 +1,13 @@
 # Filter OPTIONS Method
-[![Version](https://img.shields.io/badge/Version-v1.0-green.svg)]()
+[![Version](https://img.shields.io/badge/Version-v1.1-green.svg)]()
 [![Language](https://img.shields.io/badge/Language-Python-orange.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/capt-meelo/filter-options-method/blob/master/LICENSE)
 
 
 A Burp extension that filters out `OPTIONS` requests from populating Burp's Proxy history. This extension works by doing the following:
 
-1. Forcing the `Content-Typ` header value to `text/css; charset=UTF-8`.
-2. Emptying the response body so Burp will not recognize the MIME type incorrectly.
+1. Force the `Content-Type` header value to `text/css; charset=UTF-8`.
+2. Comment out the entire response body so Burp will not recognize the MIME type incorrectly.
 
 A post about this extension can be found [post](https://captmeelo.com/pentest/2020/01/06/filter-options-method.html).
 
