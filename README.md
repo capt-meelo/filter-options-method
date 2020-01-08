@@ -1,5 +1,5 @@
 # Filter OPTIONS Method
-[![Version](https://img.shields.io/badge/Version-v1.1-green.svg)]()
+[![Version](https://img.shields.io/badge/Version-v1.2-green.svg)]()
 [![Language](https://img.shields.io/badge/Language-Python-orange.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/capt-meelo/filter-options-method/blob/master/LICENSE)
 

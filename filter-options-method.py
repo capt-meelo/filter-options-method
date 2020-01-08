@@ -1,6 +1,6 @@
 """
 Name:           Filter OPTIONS Method
-Version:        1.1
+Version:        1.2
 Author:         Capt. Meelo (@CaptMeelo)
 Description:    A Burp extension that filters out `OPTIONS` requests from populating Burp's Proxy history. 
 Blog Post:      https://captmeelo.com/pentest/2020/01/06/filter-options-method.html
@@ -26,6 +26,10 @@ class BurpExtender(IBurpExtender, IHttpListener):
 
     # implement IHttpListener
     def processHttpMessage(self, toolFlag, messageIsRequest, messageInfo):
+        
+        # only process responses
+        if messageIsRequest:
+            return
 
         # focus on Proxy tool only (constant value is "4") and ignore other tools (e.g. Repeater)
         # constant values here: https://portswigger.net/burp/extender/api/constant-values.html#burp.IBurpExtenderCallbacks.TOOL_PROXY
