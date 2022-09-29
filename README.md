@@ -19,7 +19,7 @@ Install the extension from the [BApp Store](https://portswigger.net/bappstore/fa
 
 ## Manually
 
-1. Download [burp-filter-options-method.py](https://github.com/capt-meelo/filter-options-method/blob/master/filter-options-method.py) to your machine.
+1. Download [burp-filter-options-method.py](filter-options-method.py) to your machine.
 2. Go to _**Extender > Extensions**_ tab, then click on the _**Add**_ button. On the new window, browse the location of **burp-filter-options-method.py** and click the _**Next**_ button.
 ![Load Extension](/images/load-extension.png)
 
