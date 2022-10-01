@@ -61,7 +61,7 @@ class BurpExtender(IBurpExtender, IHttpListener):
             responseHeaders.add("Content-Type: text/css; charset=UTF-8")
             
             # comment out the response body (refer to the blog why I did it)
-            responseBodyBytes = "/* Injected by 'Filter OPTIONS Method'\n\n" + responseBytes[responseInfo.getBodyOffset():] + "\n\nInjected by 'Filter OPTIONS Method' */"
+            responseBodyBytes = "/* Injected by 'Filter OPTIONS Method' */"
             
             # rebuild the new response
             responseModified = self._helpers.buildHttpMessage(responseHeaders, responseBodyBytes)
